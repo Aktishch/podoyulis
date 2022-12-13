@@ -28,14 +28,14 @@
 	align-items    : center;
 	justify-content: center;
 
-	--size       : 48px;
+	--size       : 52px;
 	height       : var(--size);
 	padding      : 0 calc(var(--size) / 2);
 	border-radius: 8px;
 
 	font-size  : 16px;
 	font-family: var(--font-base);
-	font-weight: bold;
+	font-weight: 600;
 
 	transition: .2s ease;
 

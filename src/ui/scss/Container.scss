@@ -1,9 +1,8 @@
 :root {
   --section-width     : calc(100vw - 30px);
-  --section-gap-top   : 20px;
-  --section-gap-bottom: 20px;
+  --section-gap-top   : 35px;
+  --section-gap-bottom: 35px;
 }
-
 
 .container {
   width    : 100%;
@@ -11,35 +10,30 @@
   margin   : 0 auto;
 }
 
-
-
 dialog,
 section,
 header,
 footer {
-  // padding: 0px calc(50% - var(--section-width) / 2);
-  padding: 0px 15px;
+  padding: 0px calc(50% - var(--section-width) / 2);
 }
-
-
-
-@media (min-width: $md) {
-
-  dialog,
-  section,
-  header {
-    padding: 0px 40px;
-  }
-}
-
-
-// @media (min-width: $lg) {
-//   :root {
-//     --section-width: #{$container_lg};
-//   }
-// }
 
 section {
   padding-top   : var(--section-gap-top);
   padding-bottom: var(--section-gap-bottom);
+}
+
+@media (min-width: $md) {
+  :root {
+    --section-width     : #{$container_md};
+    --section-gap-top   : 50px;
+    --section-gap-bottom: 50px;
+  }
+}
+
+@media (min-width: $lg) {
+  :root {
+    --section-width     : #{$container_lg};
+    --section-gap-top   : 70px;
+    --section-gap-bottom: 70px;
+  }
 }
