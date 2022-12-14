@@ -78,17 +78,12 @@
 	}
 
 	&-small {
-		--size: 38px;
+		--size: 42px;
 	}
 
 	// color
 	@include btnColor(#{"primary"});
 	@include btnColor(#{"sec"});
-	@include btnColor(#{"red"});
-	@include btnColor(#{"blue"});
-	@include btnColor(#{"green"});
-	@include btnColor(#{"yellow"});
-	@include btnColor(#{"icon"});
 
 
 	&--white {

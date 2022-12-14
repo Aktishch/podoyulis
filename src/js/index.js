@@ -9,6 +9,11 @@ import toggle from 'npm-kit-toggle';
 import ripple from 'npm-kit-ripple';
 import scrollHeader from './scroll-header';
 import dataHref from './data-href';
+import yandexMap from './yandex-map';
+import result from './result';
+import specifications from './specifications';
+import scrolled from './scrolled';
+import formSubmit from './form-submit';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 
@@ -36,5 +41,10 @@ function loadHandler() {
 	ripple.deAttach('.btn--link')
 	scrollHeader.init()
 	dataHref.init()
+	yandexMap.init()
+	result.init()
+	specifications.init()
+	scrolled.init()
+	formSubmit.init()
 
 }

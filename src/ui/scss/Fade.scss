@@ -8,8 +8,5 @@
 }
 
 .fade {
-  @include AddMedia {
-    @include Fade;
-
-  }
+  @include Fade;
 }
