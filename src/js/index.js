@@ -2,7 +2,6 @@ import showPass from "./show-pass";
 import fancybox from "./fancybox";
 import rangeSlider from './range-slider';
 import theme from './theme';
-import inputmask from "./inputmask";
 import scrollTo from "./scrollTo";
 import tab from 'npm-kit-tab';
 import toggle from 'npm-kit-toggle';
@@ -13,9 +12,8 @@ import yandexMap from './yandex-map';
 import result from './result';
 import specifications from './specifications';
 import scrolled from './scrolled';
-import formSubmit from './form-submit';
+import maskTel from './mask-tel';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
-
 
 import '../scss/index.scss';
 
@@ -34,8 +32,6 @@ function loadHandler() {
 	toggle.init()
 	ripple.init()
 	theme.init()
-	inputmask.init(document)
-
 	ripple.attach('.btn')
 	ripple.attach('.waved')
 	ripple.deAttach('.btn--link')
@@ -45,6 +41,6 @@ function loadHandler() {
 	result.init()
 	specifications.init()
 	scrolled.init()
-	formSubmit.init()
+	maskTel.init()
 
 }

@@ -1,0 +1,26 @@
+<div class="dialog-middle feedback card flex flex-align-center bg-l3">
+  <div class="feedback__pic d-none d-lg-block flex-grow h-100 w-50">
+    <img class="feedback__img w-100 h-100" src="img/feedback.jpg" alt="">
+  </div>
+  <form class="feedback__form flex-grow color-black w-50 -form-submit-" data-request="/submit-handler.php">
+    <div class="text-h4 text-md-h2 text--bold color-primary mb-5 mb-md-8">Отправить заявку</div>
+    <label class="form-field mb-5 -validate-label-">
+      <div class="text-body-1 mb-2">Ваше имя</div>
+      <div class="form-input-cover">
+        <input type="text" class="form-input -validate-input- -input-name-" placeholder="Напишите имя..." name="name">
+      </div>
+      <div class="error error--none -validate-error-">Пожалуйста, введите ваше имя!</div>
+    </label>
+    <label class="form-field mb-5 mb-md-8 -validate-label-">
+      <div class="text-body-1 mb-2">Ваш телефон</div>
+      <div class="form-input-cover">
+        <input type="tel" class="form-input -validate-input- -input-tel-" placeholder="+7(___)___-__-__" name="tel">
+      </div>
+      <div class="error error--none -validate-error-">Пожалуйста, введите ваш номер!</div>
+    </label>
+    <button class="btn btn--primary btn--fill w-100 w-md-auto px-10 mb-5" type="submit">Отправить</button>
+    <div class="text-body-2 lh-1-5 link-hover" data-fancybox-modal data-src="dialog-politic.html" data-type="ajax">
+      <span class="fade-70">Нажимая кнопку «Отправить» вы даете согласие <br class="d-none d-md-block"> на</span> <span class="text--underline">обработку ваших персональных данных</span>
+    </div>
+  </form>
+</div>

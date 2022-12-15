@@ -44,7 +44,7 @@
 		color      : var(--color-text);
 
 		background-color: var(--bg3);
-		border          : 1px solid var(--color-text-10);
+		border          : 1px solid var(--color-grey-50);
 
 		&:first-of-type {
 			border-start-start-radius: 10px;
@@ -62,7 +62,7 @@
 
 
 		&:focus {
-			border-color: var(--color-primary);
+			border-color: var(--color-grey);
 			box-shadow  : 0 0 0 1px var(--color-primary);
 			z-index     : 2;
 		}

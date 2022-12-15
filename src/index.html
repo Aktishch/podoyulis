@@ -1,15 +1,15 @@
 <%= _.template(require('./html-includes/header.html').default)() %>
 
 <section class="started flex flex-align-center flex-justify-between bg-l3 py-10">
-  <div class="started__content mb-10 mb-lg-0">
+  <div class="started__content mb-md-10 mb-lg-0">
     <div class="started__title text--bold color-primary mb-5 anim anim--up -scroll-">
       Абразивные колпачки <br class="d-none d-md-block">
       от 240 ₽ за 5 шт.
     </div>
     <div class="text-body-1 text-md-subtitle-2 text--regular color-primary mb-5 mb-md-10 delay-2 anim anim--up -scroll-">Бесплатная доставка по РФ при покупке до 30 декабря</div>
     <div class="started__btns flex flex-wrap flex-align-center mb-5 mb-md-10 delay-4 anim anim--up -scroll-">
-      <button class="started__btn btn btn--primary btn--fill">Узнать цену</button>
-      <button class="started__btn btn btn--primary btn--contur">Стать партнером</button>
+      <button class="started__btn btn btn--primary btn--fill" data-fancybox-modal data-src="dialog-submit.html" data-type="ajax">Узнать цену</button>
+      <button class="started__btn btn btn--primary btn--contur" data-fancybox-modal data-src="dialog-feedback.html" data-type="ajax">Стать партнером</button>
     </div>
     <div class="started__items flex flex-wrap flex-align-center">
       <div class="flex flex-align-center delay-5 anim anim--up -scroll-">
@@ -38,7 +38,7 @@
       </div>
     </div>
   </div>
-  <div class="started__circle w-100 duration-8 anim anim--increase -scroll-">
+  <div class="started__circle w-100 duration-8 mb-md-0 mb-5 anim anim--increase -scroll-">
     <img class="started__img started__img--1" src="img/started-img-1.png" alt="">
     <img class="started__img started__img--2" src="img/started-img-2.png" alt="">
   </div>
@@ -74,7 +74,8 @@
 <section class="specifications" id="product">
   <div class="text-body-1 text-md-subtitle-2 mb-3 anim anim--up -scroll-">О товаре</div>
   <div class="text-h3 text-md-h0 text--demibold lh-1-5 mb-5 anim anim--up -scroll-">Характеристика колпачка №10</div>
-  <form class="specifications__form -specifications- -form-submit-" data-request="/ajax/submit-handler.php">
+  <form class="specifications__form -specifications- -form-submit-" data-request="/submit-handler.php">
+    <input type="hidden" name="form-name" value="Характеристика">
     <div class="specifications__head flex mb-7 mb-md-10 mb-lg-6 delay-2 anim anim--up -scroll-">
       <div class="flex flex-column">
         <div class="text-body-1 text--demibold mb-2">Выберите номер колпачка:</div>
@@ -126,17 +127,19 @@
       </div>
       <div class="specifications__feedback bg-green w-100 p-5 p-md-10 anim anim--left -scroll-">
         <div class="text-h4 text-md-h2 text--demibold color-primary mb-5 mb-md-8">Узнать цену</div>
-        <label class="form-field mb-5">
+        <label class="form-field mb-5 -validate-label-">
           <div class="text-body-1 text-md-subtitle-2 text--demibold mb-2">Имя</div>
           <div class="form-input-cover">
-            <input type="text" class="form-input" placeholder="Введите имя" required>
+            <input type="text" class="form-input -validate-input- -input-name-" placeholder="Введите имя" name="name">
           </div>
+          <div class="error error--none -validate-error-">Пожалуйста, введите ваше имя!</div>
         </label>
-        <label class="form-field mb-5 mb-md-8">
+        <label class="form-field mb-5 mb-md-8 -validate-label-">
           <div class="text-body-1 text-md-subtitle-2 text--demibold mb-2">Телефон</div>
           <div class="form-input-cover">
-            <input type="tel" class="form-input" placeholder="+7(___)___-__-__" required>
+            <input type="tel" class="form-input -validate-input- -input-tel-" placeholder="+7(___)___-__-__" name="tel">
           </div>
+          <div class="error error--none -validate-error-">Пожалуйста, введите ваш номер!</div>
         </label>
         <button class="btn btn--primary btn--fill px-10 mb-5" type="submit">Отправить</button>
         <div class="text-body-2 lh-1-5 link-hover" data-fancybox-modal data-src="dialog-politic.html" data-type="ajax">
@@ -259,28 +262,31 @@
         <div class="text-body-1 text-md-subtitle-2 text--regular mb-3">и мы рассмотрим ваше предложение <br class="d-none d-md-block"> в течение 2 часов</div>
       </div>
     </div>
-    <form class="partners__form w-100 py-5 px-3 py-md-9 px-md-8">
+    <form class="partners__form w-100 py-5 px-3 py-md-9 px-md-8 -form-submit-" data-request="/submit-handler.php">
       <div class="grid grid-spacing-5 grid-spacing-lg-8">
         <div class="grid-col-12 grid-col-md-6">
-          <label class="form-field mb-5">
+          <label class="form-field mb-5 -validate-label-">
             <div class="text-body-1 text-md-subtitle-2 text--demibold mb-2">Имя</div>
             <div class="form-input-cover">
-              <input type="text" class="form-input" placeholder="Введите имя" required>
+              <input type="text" class="form-input -validate-input- -input-name-" placeholder="Введите имя" name="name">
             </div>
+            <div class="error error--none -validate-error-">Пожалуйста, введите ваше имя!</div>
           </label>
-          <label class="form-field">
+          <label class="form-field -validate-label-">
             <div class="text-body-1 text-md-subtitle-2 text--demibold mb-2">Телефон</div>
             <div class="form-input-cover">
-              <input type="tel" class="form-input" placeholder="+7(___)___-__-__" required>
+              <input type="tel" class="form-input -validate-input- -input-tel-" placeholder="+7(___)___-__-__" name="tel">
             </div>
+            <div class="error error--none -validate-error-">Пожалуйста, введите ваш номер!</div>
           </label>
         </div>
         <div class="grid-col-12 grid-col-md-6">
-          <label class="form-field">
+          <label class="form-field -validate-label-">
             <div class="text-body-1 text-md-subtitle-2 text--demibold mb-2">Ваше предложение</div>
             <div class="form-input-cover">
-              <textarea class="form-input" placeholder="Напишите здесь..." required></textarea>
+              <textarea class="form-input -validate-input- -input-textarea-" placeholder="Напишите здесь..." name="text"></textarea>
             </div>
+            <div class="error error--none -validate-error-">Пожалуйста, оставьте предложение!</div>
           </label>
         </div>
         <div class="grid-col-12">

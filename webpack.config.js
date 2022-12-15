@@ -23,7 +23,7 @@ function generateHtmlPlugins(templateDir) {
       ...htmlWebpackPluginDefaults,
       filename: `${name}.html`,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-
+      minify: {collapseWhitespace: false}
     })
   }).filter((item) => item !== null)
 }

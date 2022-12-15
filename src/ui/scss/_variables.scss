@@ -1,12 +1,13 @@
 $colors: ('primary': #013D2B,
-    'sec':  #DA2747,
+    'sec': #DA2747,
     'black': #1E1E1E,
     'white': #ffffff,
-    'green': #CBD7CF);
+    'green': #CBD7CF,
+    'grey': #D7D7D7);
 
-    $container_md: 650px;
-    $container_lg: 1230px;
-    
-    $sm : 425.98px;
-    $md : $container_md+29.98px;
-    $lg : $container_lg+29.98px;
+$container_md: 650px;
+$container_lg: 1230px;
+
+$sm : 425.98px;
+$md : $container_md+29.98px;
+$lg : $container_lg+29.98px;
