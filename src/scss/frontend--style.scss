@@ -178,19 +178,18 @@ body {
 	&__img {
 		position : absolute;
 		max-width: none;
-		top      : 0;
 
 		&--1 {
-			top    : 0;
-			left   : -110px;
-			width  : 650px;
+			top    : -60px;
+			left   : -180px;
+			width  : 720px;
 			z-index: 1;
 		}
 
 		&--2 {
-			top  : -10px;
-			right: -80px;
-			width: 440px;
+			top  : 60px;
+			right: 0;
+			width: 330px;
 		}
 	}
 
@@ -224,7 +223,8 @@ body {
 		}
 
 		&__circle {
-			order: 1;
+			max-width: 300px;
+			order    : 1;
 		}
 
 		&__title {
@@ -245,14 +245,15 @@ body {
 		}
 
 		&__img {
-			max-width: 100%;
-
 			&--1 {
-				left: -70px;
+				top  : -20px;
+				left : -80px;
+				width: 350px;
 			}
 
 			&--2 {
-				top: -50px;
+				top  : 40px;
+				width: 160px;
 			}
 		}
 
@@ -328,8 +329,9 @@ body {
 	}
 
 	&__img {
-		max-width: 330px;
-		transform: rotate(29.04deg);
+		pointer-events: none;
+		height        : 530px;
+		transform     : rotate(30deg) translate(-110px, 25px);
 	}
 
 	&__shadow {
@@ -339,7 +341,7 @@ body {
 		filter    : blur(15px);
 		width     : 360px;
 		height    : 32px;
-		transform : translateX(-40px);
+		transform : translate(-40px, -40px);
 	}
 
 	&__item {
@@ -409,7 +411,8 @@ body {
 		}
 
 		&__img {
-			max-width: 230px;
+			height   : 370px;
+			transform: rotate(30deg) translate(-160px, 50px);
 		}
 
 		&__feedback {
