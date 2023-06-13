@@ -2,16 +2,18 @@ const init = () => {
 
 	const header = document.querySelector('.-header-')
 
-	let prevScrollpos = window.pageYOffset
+	if (!header) return
 
 	const scrollHeader = () => {
 
-		let currentScrollPos = window.pageYOffset
-		let headerHeight = header.clientHeight
+		const currentScrollPos = window.pageYOffset
+		const headerHeight = header.clientHeight / 2
 
-		prevScrollpos > currentScrollPos ? header.style.setProperty('--top', '0') : header.style.setProperty('--top', `-${headerHeight}px`)
-
-		prevScrollpos = currentScrollPos
+		if (currentScrollPos > headerHeight) {
+			header.classList.add('header--top')
+		} else {
+			header.classList.remove('header--top')
+		}
 
 	}
 
