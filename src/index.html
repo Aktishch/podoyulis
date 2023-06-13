@@ -74,18 +74,18 @@
 <section class="specifications" id="product">
   <div class="text-body-1 text-md-h6 mb-3 anim anim--up -scroll-">О товаре</div>
   <div class="text-h3 text-md-h1 text--demibold lh-1-5 mb-5 anim anim--up -scroll-">Характеристика колпачка №10</div>
-  <form class="specifications__form -specifications- -form-submit-" data-request="/submit-handler.php">
+  <form class="specifications__form -form-submit-" data-filter data-request="/submit-handler.php">
     <input type="hidden" name="form-name" value="Характеристика">
     <div class="specifications__head flex mb-7 mb-md-10 mb-lg-6 delay-2 anim anim--up -scroll-">
       <div class="flex flex-column">
         <div class="text-body-1 text--demibold mb-2">Выберите номер колпачка:</div>
         <div class="specifications__labels flex flex-align-center">
-          <label class="specifications__label specifications__label--big flex">
-            <input class="specifications__radio d-none -specifications-toggle-" type="radio" name="number" value="10" checked data-specificatio="1">
+          <label class="specifications__label specifications__label--big flex" data-filter-category="category-1">
+            <input class="specifications__radio d-none" type="radio" name="number" value="10" checked data-specificatio="1">
             <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">№10</span>
           </label>
-          <label class="specifications__label specifications__label--big flex">
-            <input class="specifications__radio d-none -specifications-toggle-" type="radio" name="number" value="13" data-specificatio="2">
+          <label class="specifications__label specifications__label--big flex" data-filter-category="category-2">
+            <input class="specifications__radio d-none" type="radio" name="number" value="13" data-specificatio="2">
             <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">№13</span>
           </label>
         </div>
@@ -113,8 +113,12 @@
       </div>
     </div>
     <div class="specifications__content flex flex-wrap flex-align-center flex-justify-between">
-      <div class="specifications__product d-none d-md-block -specifications-product-">
-        <img class="specifications__img w-100 -specifications-img-" src="img/product-1.png" alt="">
+      <div class="specifications__product" data-filter-card="category-1">
+        <img class="specifications__img w-100" src="img/product-1.png" alt="">
+        <div class="specifications__shadow d-none d-lg-block"></div>
+      </div>
+      <div class="specifications__product d-none" data-filter-card="category-2">
+        <img class="specifications__img w-100" src="img/product-2.png" alt="">
         <div class="specifications__shadow d-none d-lg-block"></div>
       </div>
       <div class="specifications__items flex flex-column flex-align-end flex-justify-end color-primary w-100">

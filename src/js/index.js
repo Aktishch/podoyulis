@@ -10,9 +10,9 @@ import scrollHeader from './scroll-header';
 import dataHref from './data-href';
 import yandexMap from './yandex-map';
 import result from './result';
-import specifications from './specifications';
 import scrolled from './scrolled';
 import maskTel from './mask-tel';
+import filter from './filter';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 import '../scss/index.scss';
@@ -39,8 +39,8 @@ function loadHandler() {
 	dataHref.init()
 	yandexMap.init()
 	result.init()
-	specifications.init()
 	scrolled.init()
 	maskTel.init()
+	filter.init()
 
 }
