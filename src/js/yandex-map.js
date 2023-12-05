@@ -2,8 +2,8 @@ import ymaps from 'ymaps'
 
 const init = () => {
 
-    const center = [45.03191007458623, 38.921171499999936]
-    const mark = [45.03191007458623, 38.921171499999936]
+    const center = [55.74637006901213,37.86132149999998]
+    const mark = [55.74637006901213,37.86132149999998]
 
     if (!document.querySelector('*[data-suggest-view]') && !document.getElementById('map')) return
 

@@ -571,9 +571,10 @@ body {
 
 .partners {
 	&__item {
-		background-color: var(--color-green-30);
+		// background-color: var(--color-green-30);
+		background: linear-gradient(180deg, #DEE8E1 0%, rgba(255, 255, 255, 0.00) 100%);
 		border-radius: 20px;
-		min-height: 200px;
+		min-height: 370px;
 	}
 
 	&__img {
