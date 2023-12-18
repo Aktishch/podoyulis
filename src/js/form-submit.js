@@ -131,7 +131,7 @@ const formSubmit = (event) => {
     
             Fancybox.show([{
     
-                src: 'dialog-submit.html',
+                src: 'dialog-submit.php',
                 type: 'ajax',
                 dragToClose: false,
                 mainClass: 'fancybox-custom-modal'
@@ -155,7 +155,6 @@ const formSubmit = (event) => {
 const init = () => {
 
     document.addEventListener('submit', (event) => {
-
 
         if (event.target.classList.contains('-form-submit-')) formSubmit(event)
 

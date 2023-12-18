@@ -74,18 +74,17 @@
 <section class="specifications" id="product">
   <div class="text-body-1 text-md-h6 mb-3 anim anim--up -scroll-">О товаре</div>
   <div class="text-h3 text-md-h1 text--demibold lh-1-5 mb-5 anim anim--up -scroll-">Характеристика колпачка №10</div>
-  <form class="specifications__form -form-submit-" data-filter data-request="/submit-handler.php">
-    <input type="hidden" name="form-name" value="Характеристика">
+  <div data-filter>
     <div class="specifications__head flex mb-7 mb-md-10 mb-lg-6 delay-2 anim anim--up -scroll-">
       <div class="flex flex-column">
         <div class="text-body-1 text--demibold mb-2">Выберите номер колпачка:</div>
         <div class="specifications__labels flex flex-align-center">
-          <label class="specifications__label specifications__label--big flex" data-filter-category="category-1">
-            <input class="specifications__radio d-none" type="radio" name="number" value="10" checked data-specificatio="1">
+          <label class="specifications__label specifications__label--big flex">
+            <input class="specifications__radio d-none" type="radio" name="number" value="10" checked>
             <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">№10</span>
           </label>
-          <label class="specifications__label specifications__label--big flex" data-filter-category="category-2">
-            <input class="specifications__radio d-none" type="radio" name="number" value="13" data-specificatio="2">
+          <label class="specifications__label specifications__label--big flex">
+            <input class="specifications__radio d-none" type="radio" name="number" value="13">
             <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">№13</span>
           </label>
         </div>
@@ -93,19 +92,19 @@
       <div class="flex flex-column">
         <div class="text-body-1 text--demibold mb-2">Выберите абразивность:</div>
         <div class="specifications__labels flex flex-align-center">
-          <label class="specifications__label specifications__label--min flex">
+          <label class="specifications__label specifications__label--min flex" data-filter-category="category-1">
             <input class="specifications__radio d-none" type="radio" name="size" value="60" checked>
             <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">60</span>
           </label>
-          <label class="specifications__label specifications__label--min flex">
+          <label class="specifications__label specifications__label--min flex" data-filter-category="category-2">
             <input class="specifications__radio d-none" type="radio" name="size" value="80">
             <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">80</span>
           </label>
-          <label class="specifications__label specifications__label--min flex">
+          <label class="specifications__label specifications__label--min flex" data-filter-category="category-3">
             <input class="specifications__radio d-none" type="radio" name="size" value="150">
             <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">150</span>
           </label>
-          <label class="specifications__label specifications__label--min flex">
+          <label class="specifications__label specifications__label--min flex" data-filter-category="category-4">
             <input class="specifications__radio d-none" type="radio" name="size" value="320">
             <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">320</span>
           </label>
@@ -121,6 +120,14 @@
         <img class="specifications__img w-100" src="img/product-2.png" alt="">
         <div class="specifications__shadow d-none d-lg-block"></div>
       </div>
+      <div class="specifications__product" data-filter-card="category-3">
+        <img class="specifications__img w-100" src="img/product-1.png" alt="">
+        <div class="specifications__shadow d-none d-lg-block"></div>
+      </div>
+      <div class="specifications__product d-none" data-filter-card="category-4">
+        <img class="specifications__img w-100" src="img/product-2.png" alt="">
+        <div class="specifications__shadow d-none d-lg-block"></div>
+      </div>
       <div class="specifications__items flex flex-column flex-align-end flex-justify-end color-primary w-100">
         <div class="specifications__item specifications__item--1 text-body-1 text--demibold text--right w-100 anim anim--up -scroll- pb-3 mb-5 mb-lg-10">Cохраняет свои свойства до конца работы</div>
         <div class="specifications__item specifications__item--2 text-body-1 text--demibold text--right w-100 anim anim--up -scroll- pb-3 mb-5 mb-lg-10">Абразив увеличивает скорость обработки</div>
@@ -129,27 +136,134 @@
         <div class="specifications__item specifications__item--5 text-body-1 text--demibold text--right w-100 anim anim--up -scroll- pb-3 mb-5 mb-lg-10">Высококачественные материалы</div>
         <div class="specifications__item specifications__item--6 text-body-1 text--demibold text--right w-100 anim anim--up -scroll- pb-3">Высокая теплотворность</div>
       </div>
-      <div class="specifications__feedback bg-green w-100 p-5 p-md-10 anim anim--left -scroll-">
-        <div class="text-h4 text-md-h2 text--demibold color-primary mb-5 mb-md-8">Узнать цену</div>
-        <label class="form-field mb-5 -validate-label-">
-          <div class="text-body-1 text-md-subtitle-2 text--demibold mb-2">Имя</div>
-          <div class="form-input-cover">
-            <input type="text" class="form-input -validate-input- -input-name-" placeholder="Введите имя" name="name">
+      <form class="specifications__feedback bg-green w-100 anim anim--left -scroll- -form-params-" data-specification data-request="dialog-product.html" data-filter-card="category-1">
+        <input type="hidden" value="60" name="abrasiveness">
+        <input type="hidden" value="img/product-1.png" name="image">
+        <input data-specification-input="price" type="hidden" name="price">
+        <input data-specification-input="oldprice" type="hidden" name="oldprice">
+        <input data-specification-input="box" type="hidden" name="box">
+        <input data-specification-input="quantity" type="hidden" name="quantity">
+        <div class="text-h4 text-md-h2 text--demibold color-primary mb-5 mb-md-8 pt-5 pt-md-10 px-5 px-md-10">Выберите кол-во</div>
+        <div class="specifications__listing px-2">
+          <div class="specifications__price flex">
+            <label class="d-block" data-specification-label>
+              <input class="specifications__check d-none" data-specification-radio value="0" type="radio" name="specification" required>
+              <div class="specifications__element py-2 px-4">
+                <s class="d-block text--right text-small fade-60 ml-auto">
+                  <span data-specification-text="oldprice">3 000</span> ₽
+                </s>
+                <div class="flex flex-align-center flex-justify-between mt-1">
+                  <div class="text-body-1">
+                    <span class="text--demibold" data-specification-text="box">1 коробочка</span> <span data-specification-text="quantity" class="fade-60">50 шт</span>
+                  </div>
+                  <div class="text-subtitle-2 text--demibold">
+                    <span data-specification-text="price">2 000</span> ₽
+                  </div>
+                </div>
+                <div class="flex flex-align-center flex-justify-between mt-1">
+                  <div class="text-body-1 fade-60">1 коробочка</div>
+                  <div class="text-body-1">1 800 ₽</div>
+                </div>
+                <div class="flex flex-align-center flex-justify-between mt-1">
+                  <div class="text-body-1 fade-60">1 колпачок</div>
+                  <div class="text-body-1">36 ₽</div>
+                </div>
+              </div>
+            </label>
+            <label class="d-block" data-specification-label>
+              <input class="specifications__check d-none" data-specification-radio value="1" type="radio" name="specification" required>
+              <div class="specifications__element py-2 px-4">
+                <s class="d-block text--right text-small fade-60 ml-auto">
+                  <span data-specification-text="oldprice">4 000</span> ₽
+                </s>
+                <div class="flex flex-align-center flex-justify-between mt-1">
+                  <div class="text-body-1">
+                    <span class="text--demibold" data-specification-text="box">1 коробочка</span> <span data-specification-text="quantity" class="fade-60">50 шт</span>
+                  </div>
+                  <div class="text-subtitle-2 text--demibold">
+                    <span data-specification-text="price">3 000</span> ₽
+                  </div>
+                </div>
+                <div class="flex flex-align-center flex-justify-between mt-1">
+                  <div class="text-body-1 fade-60">1 коробочка</div>
+                  <div class="text-body-1">1 800 ₽</div>
+                </div>
+                <div class="flex flex-align-center flex-justify-between mt-1">
+                  <div class="text-body-1 fade-60">1 колпачок</div>
+                  <div class="text-body-1">36 ₽</div>
+                </div>
+              </div>
+            </label>
           </div>
-          <div class="error error--none -validate-error-">Пожалуйста, введите ваше имя!</div>
-        </label>
-        <label class="form-field mb-5 mb-md-8 -validate-label-">
-          <div class="text-body-1 text-md-subtitle-2 text--demibold mb-2">Телефон</div>
-          <div class="form-input-cover">
-            <input type="tel" class="form-input -validate-input- -input-tel-" placeholder="+7(___)___-__-__" name="tel">
-          </div>
-          <div class="error error--none -validate-error-">Пожалуйста, введите ваш номер!</div>
-        </label>
-        <button class="btn btn--primary btn--fill px-10 mb-5" type="submit">Отправить</button>
-        <div class="text-body-2 lh-1-5 link-hover" data-fancybox-modal data-src="dialog-politic.html" data-type="ajax">
-          <span class="fade-70">Нажимая кнопку «Отправить» вы даете согласие на</span> <span class="text--underline">обработку ваших персональных данных</span>
         </div>
-      </div>
+        <div class="bg-primary py-4 px-5 px-md-10">
+          <button class="btn btn--white btn--contur w-100" type="submit">Добавить в корзину</button>
+        </div>
+      </form>
+      <form class="specifications__feedback d-none bg-green w-100 -form-params-" data-specification data-request="dialog-product.html" data-filter-card="category-2">
+        <input type="hidden" value="80" name="abrasiveness">
+        <input type="hidden" value="img/product-1.png" name="image">
+        <input data-specification-input="price" type="hidden" name="price">
+        <input data-specification-input="oldprice" type="hidden" name="oldprice">
+        <input data-specification-input="box" type="hidden" name="box">
+        <input data-specification-input="quantity" type="hidden" name="quantity">
+        <div class="text-h4 text-md-h2 text--demibold color-primary mb-5 mb-md-8 pt-5 pt-md-10 px-5 px-md-10">Выберите кол-во</div>
+        <div class="specifications__listing px-2">
+          <div class="specifications__price flex">
+            <label class="d-block" data-specification-label>
+              <input class="specifications__check d-none" data-specification-radio value="0" type="radio" name="specificationtwo" required>
+              <div class="specifications__element py-2 px-4">
+                <s class="d-block text--right text-small fade-60 ml-auto">
+                  <span data-specification-text="oldprice">1 000</span> ₽
+                </s>
+                <div class="flex flex-align-center flex-justify-between mt-1">
+                  <div class="text-body-1">
+                    <span class="text--demibold" data-specification-text="box">1 коробочка</span> <span data-specification-text="quantity" class="fade-60">50 шт</span>
+                  </div>
+                  <div class="text-subtitle-2 text--demibold">
+                    <span data-specification-text="price">800</span> ₽
+                  </div>
+                </div>
+                <div class="flex flex-align-center flex-justify-between mt-1">
+                  <div class="text-body-1 fade-60">1 коробочка</div>
+                  <div class="text-body-1">1 800 ₽</div>
+                </div>
+                <div class="flex flex-align-center flex-justify-between mt-1">
+                  <div class="text-body-1 fade-60">1 колпачок</div>
+                  <div class="text-body-1">36 ₽</div>
+                </div>
+              </div>
+            </label>
+            <label class="d-block" data-specification-label>
+              <input class="specifications__check d-none" data-specification-radio value="1" type="radio" name="specificationtwo" required>
+              <div class="specifications__element py-2 px-4">
+                <s class="d-block text--right text-small fade-60 ml-auto">
+                  <span data-specification-text="oldprice">7 000</span> ₽
+                </s>
+                <div class="flex flex-align-center flex-justify-between mt-1">
+                  <div class="text-body-1">
+                    <span class="text--demibold" data-specification-text="box">1 коробочка</span> <span data-specification-text="quantity" class="fade-60">50 шт</span>
+                  </div>
+                  <div class="text-subtitle-2 text--demibold">
+                    <span data-specification-text="price">5 000</span> ₽
+                  </div>
+                </div>
+                <div class="flex flex-align-center flex-justify-between mt-1">
+                  <div class="text-body-1 fade-60">1 коробочка</div>
+                  <div class="text-body-1">1 800 ₽</div>
+                </div>
+                <div class="flex flex-align-center flex-justify-between mt-1">
+                  <div class="text-body-1 fade-60">1 колпачок</div>
+                  <div class="text-body-1">36 ₽</div>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="bg-primary py-4 px-5 px-md-10">
+          <button class="btn btn--white btn--contur w-100" type="submit">Добавить в корзину</button>
+        </div>
+      </form>
     </div>
     <div class="specifications__description color-primary anim anim--fade -scroll-">
       <div class="text-subtitle-2 mb-2">Описание:</div>
@@ -160,10 +274,40 @@
         Классический аппарат, Аппарат с пылесосом, Аппарата с подоспреем.
       </div>
     </div>
-  </form>
+  </div>
 </section>
 
 <section class="result bg-l3 -result-" id="result">
+  <div class="text-body-1 text-md-subtitle-2 mb-3 anim anim--up -scroll-">Почему мы?</div>
+  <div class="text-h3 text-md-h0 text--demibold lh-1-5 mb-5 anim anim--up -scroll-">Аргументы в пользу нашей продукции</div>
+  <div class="mb-10 pb-lg-10">
+    <div class="grid grid-spacing-8">
+      <div class="grid-col-md-6 grid-col-lg-4">
+        <div class="h-100 anim anim--up -scroll-">
+          <div class="result__pack mb-4 mb-md-6">
+            <img class="result__pic w-100 h-100" src="img/result-1.png" alt="">
+          </div>
+          <div class="text-body-1 text--demibold">Позволяет подологам и мастерам педикюра ускорить работу, а значит увеличить прибыль</div>
+        </div>
+      </div>
+      <div class="grid-col-md-6 grid-col-lg-4">
+        <div class="h-100 anim anim--up -scroll-">
+          <div class="result__pack mb-4 mb-md-6">
+            <img class="result__pic w-100 h-100" src="img/result-1.png" alt="">
+          </div>
+          <div class="text-body-1 text--demibold">Позволяет подологам и мастерам педикюра ускорить работу, а значит увеличить прибыль</div>
+        </div>
+      </div>
+      <div class="grid-col-md-6 grid-col-lg-4">
+        <div class="h-100 anim anim--up -scroll-">
+          <div class="result__pack mb-4 mb-md-6">
+            <img class="result__pic w-100 h-100" src="img/result-1.png" alt="">
+          </div>
+          <div class="text-body-1 text--demibold">Позволяет подологам и мастерам педикюра ускорить работу, а значит увеличить прибыль</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="text-body-1 text-md-subtitle-2 mb-3 anim anim--up -scroll-">До — После</div>
   <div class="text-h3 text-md-h0 text--demibold lh-1-5 mb-5 anim anim--up -scroll-">Посмотрите результат уже сейчас</div>
   <div class="result-slide h-100 mb-5 mb-md-10 duration-5 anim anim--increase -scroll- -result-slide-">
@@ -231,34 +375,6 @@
 <section class="partners bg-l3" id="partners">
   <div class="text-body-1 text-md-subtitle-2 mb-3 anim anim--up -scroll-">Наши партнеры</div>
   <div class="text-h3 text-md-h0 text--demibold lh-1-5 mb-5 mb-md-10 anim anim--up -scroll-">Мы всегда готовы сотрудничать</div>
-  <!-- <div class="mb-8">
-    <div class="grid grid-spacing-5 grid-spacing-lg-8">
-      <div class="grid-col-12 grid-col-md-6 grid-col-lg-3">
-        <div class="partners__item flex flex-align-center flex-justify-center flex-column p-5 anim anim--up -scroll-">
-          <img class="partners__img mb-5" src="img/partner-1.png" alt="">
-          <div class="text-body-1 text--center text--demibold text--uppercase mt-auto">KEVIN.MURPHY</div>
-        </div>
-      </div>
-      <div class="grid-col-12 grid-col-md-6 grid-col-lg-3">
-        <div class="partners__item flex flex-align-center flex-justify-center flex-column p-5 delay-2 anim anim--up -scroll-">
-          <img class="partners__img mb-5" src="img/partner-2.png" alt="">
-          <div class="text-body-1 text--center text--demibold text--uppercase mt-auto">ORIBE</div>
-        </div>
-      </div>
-      <div class="grid-col-12 grid-col-md-6 grid-col-lg-3">
-        <div class="partners__item flex flex-align-center flex-justify-center flex-column p-5 delay-4 anim anim--up -scroll-">
-          <img class="partners__img mb-5" src="img/partner-3.png" alt="">
-          <div class="text-body-1 text--center text--demibold text--uppercase mt-auto">ALTERNA</div>
-        </div>
-      </div>
-      <div class="grid-col-12 grid-col-md-6 grid-col-lg-3">
-        <div class="partners__item flex flex-align-center flex-justify-center flex-column p-5 delay-8 anim anim--up -scroll-">
-          <img class="partners__img mb-5" src="img/partner-4.png" alt="">
-          <div class="text-body-1 text--center text--demibold text--uppercase mt-auto">ALDO COPPOLA</div>
-        </div>
-      </div>
-    </div>
-  </div> -->
   <div class="mb-8">
     <div class="grid grid-spacing-5 grid-spacing-lg-8">
       <div class="grid-col-12 grid-col-md-6">

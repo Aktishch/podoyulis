@@ -15,6 +15,10 @@
     <meta name="theme-color" content="#ffffff">
 
     <title>ПодоЮлис</title>
+
+    <script>
+        window.basket = []
+    </script>
 </head>
 
 <body>
@@ -24,14 +28,23 @@
             <a class="d-none d-lg-block text-body-1 link-hover" href="#product" data-href>О товаре</a>
             <a class="d-none d-lg-block text-body-1 link-hover" href="#result" data-href>Результат</a>
             <a class="d-none d-lg-block text-body-1 link-hover" href="#conditions" data-href>Доставка</a>
+            <a class="d-none d-lg-block text-body-1 link-hover" href="#partners" data-href>Партнеры</a>
             <a class="header__logo flex flex-align-center flex-justify-center w-100" href="/">
                 <img class="header__img w-100 -header-img-" src="img/logo-img.png" alt="">
                 <div class="header__text d-none d-lg-block bg-l3 w-100">
                     <img class="w-100 mx-auto" src="img/logo-text.png" alt="">
                 </div>
             </a>
-            <a class="d-none d-lg-block text-body-1 link-hover" href="#partners" data-href>Партнеры</a>
             <a class="d-none d-lg-block text-body-1 link-hover" href="#reviews" data-href>Отзывы</a>
             <a class="d-none d-lg-block text-body-1 link-hover" href="#contacts" data-href>Контакты</a>
+            <button class="header__basket btn btn--primary btn--link" data-basket data-fancybox-basket data-src="dialog-basket.html" data-type="ajax">
+                <svg class="icon text-h4">
+                    <use xlink:href="./img/icons.svg#basket" />
+                </svg>
+                <span class="text-body-1 mx-3">Корзина</span>
+                <div class="header__circle flex flex-align-center flex-justify-center">
+                    <span class="text-body-1 fade-60" data-basket-quantity>0</span>
+                </div>
+            </button>
         </nav>
     </header>

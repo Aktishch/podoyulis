@@ -1,5 +1,6 @@
 import { Fancybox } from "@fancyapps/ui";
 import ru from "@fancyapps/ui/src/Fancybox/l10n/ru"
+import { createProductions } from "./production"
 
 const init = () => {
   Fancybox.defaults.trapFocus = false
@@ -25,6 +26,16 @@ const init = () => {
       ...options
     })
   }
+
+  Fancybox.bind('[data-fancybox-basket]', {
+    dragToClose: false,
+    mainClass: 'fancybox-custom-modal',
+    on: {
+      done: () => {
+        createProductions()
+      },
+    },
+  })
 
   window.Fancybox = Fancybox
 }

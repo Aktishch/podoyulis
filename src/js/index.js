@@ -13,6 +13,9 @@ import result from './result';
 import scrolled from './scrolled';
 import maskTel from './mask-tel';
 import filter from './filter';
+import formSubmit from './form-submit';
+import specifications from './specifications';
+import production from './production';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 import '../scss/index.scss';
@@ -42,5 +45,7 @@ function loadHandler() {
 	scrolled.init()
 	maskTel.init()
 	filter.init()
-
+	formSubmit.init()
+	specifications.init()
+	production.init()
 }

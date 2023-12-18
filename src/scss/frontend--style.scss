@@ -46,6 +46,76 @@
 	--bg3: #323232;
 }
 
+@mixin scrollbar($rotate-1, $rotate-2, $rotate-3) {
+	background-image: linear-gradient(#{$rotate-1}deg,  var(--color-green) 35%, transparent 41%),
+	linear-gradient(#{$rotate-2}deg,  var(--color-green) 35%, transparent 41%),
+	linear-gradient(#{$rotate-3}deg,  var(--color-green) 35%, transparent 41%);
+}
+
+* {
+	scrollbar: {
+		width: thin;
+		color: var(--color-primary) var(--color-green);
+	}
+}
+
+::-webkit-scrollbar {
+	@media(pointer: fine) {
+		width: 10px;
+  
+	  &-track {
+		background-color: var(--color-green);
+  
+		&-piece {
+		  margin: 8px 0;
+		}
+	  }
+  
+	  &-thumb {
+		background-color: var(--color-primary);
+		border-radius: 8px;
+	  }
+  
+	  &-corner {
+		background-color: var(--color-green);
+	  }
+  
+	  &-button {
+		background-color: var(--color-primary);
+  
+		&:vertical {
+		  &:decrement:start {
+			@include scrollbar(120, 240, 0);
+		  }
+  
+		  &:increment:end {
+			@include scrollbar(300, 60, 180);
+		  }
+  
+		  &:increment:start,
+		  &:decrement:end {
+			display: none;
+		  }
+		}
+  
+		&:horizontal {
+		  &:decrement:start {
+			@include scrollbar(30, 150, -90);
+		  }
+  
+		  &:increment:end {
+			@include scrollbar(210, 330, 90);
+		  }
+  
+		  &:increment:start,
+		  &:decrement:end {
+			display: none;
+		  }
+		}
+	  }
+	}
+  }
+
 body {
 	background: var(--bg3);
 	color: var(--color-text);
@@ -115,9 +185,29 @@ body {
 		bottom: 0;
 	}
 
+	&__circle {
+		width: 28px;
+		height: 28px;
+		background-color: rgba(203, 215, 207, 0.3);
+		border-radius: 100%;
+	}
+
+	&__basket {
+		margin-left: 100px;
+
+		&--none {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+	}
+
 	@media(max-width: $lg) {
 		& {
 			position: static;
+		}
+
+		&__basket {
+			margin-left: 0;
 		}
 	}
 
@@ -424,6 +514,33 @@ body {
 	&__feedback {
 		border-radius: 20px;
 		max-width: 390px;
+		overflow: hidden;
+	}
+
+	&__listing {
+		height: 300px;
+		overflow: auto;
+	}
+
+	&__price {
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	&__check:checked + &__element {
+		background-color: var(--color-primary-20);
+	}
+
+	&__element {
+		border-radius: 20px;
+		cursor: pointer;
+		transition: 0.3s;
+
+		@media (hover) {
+			&:hover {
+				background-color: var(--color-primary-20);
+			}
+		}
 	}
 
 	@media(max-width: $lg) {
@@ -535,6 +652,24 @@ body {
 
 	&__bg {
 		object-fit: contain;
+	}
+
+	&__pack {
+		position: relative;
+		overflow: hidden;
+		border-radius: 20px;
+
+		&::after {
+			content: '';
+			display: block;
+			padding-top: 80%;
+		}
+	}
+
+	&__pic {
+		position: absolute;
+		inset: 0;
+		object-fit: cover;
 	}
 }
 
@@ -790,5 +925,61 @@ body {
 	&:focus {
 		border-color: var(--color-sec);
 		box-shadow: none;
+	}
+}
+
+.basket {
+	&__title {
+		font-size: 52px;
+
+		@media (max-width: $md) {
+			font-size: 30px;
+		}
+	}
+
+	&__items {
+		flex-direction: column;
+		max-height: 340px;
+		overflow: auto;
+	}
+
+	&__item {
+		border-bottom: 1px solid rgba(147, 167, 158, 0.4);
+		gap: 40px;
+
+		@media (max-width: $md) {
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__image {
+		max-width: 120px;
+		border: 1px solid #93A79E66;
+		border-radius: 20px;
+
+		@media (max-width: $md) {
+			max-width: 90px;
+		}
+	}
+
+	&__content {
+		background-color: rgba(203, 215, 207, 0.3);
+		border-radius: 0 0 16px 16px;
+	}
+
+	&__form {
+		gap: 32px;
+
+		@media (max-width: $lg) {
+			gap: 24px;
+			flex-direction: column;
+			align-items: stretch;
+			justify-content: flex-start;
+		}
 	}
 }
