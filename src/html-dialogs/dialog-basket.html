@@ -1,9 +1,8 @@
 <div class="dialog-large basket card bg-white color-black" data-basket-dialog>
-  <form class="card-content p-0 -form-submit-" data-request="/submit-handler.php">
+  <div class="card-content p-0">
     <div class="w-100 p-5 p-md-10">
       <div class="basket__title text--demibold color-primary mb-7 mb-md-10">Корзина</div>
-      <div class="basket__items flex mb-5" data-basket-dialog-container>
-      </div>
+      <div class="basket__items flex mb-5" data-basket-dialog-container></div>
       <div class="text--right">
         <div class="d-block text-body-1 fade-60 mb-md-1">Итого</div>
         <div class="d-block text-h6 text-md-h3 text--demibold">
@@ -13,7 +12,9 @@
     </div>
     <div class="basket__content w-100 p-5 p-md-10">
       <div class="text-h3 text-md-h1 text--demibold lh-1-5 mb-7">Оставить заявку</div>
-      <div class="basket__form flex flex-align-end flex-justify-between mb-8">
+      <form class="basket__form flex flex-align-end flex-justify-between mb-8 -form-submit-" data-request="/submit-handler.php" data-form-basket>
+        <div data-basket-dialog-value></div>
+        <input type="hidden" data-basket-dialog-input-result name="result">
         <label class="form-field flex-grow -validate-label-">
           <div class="text-body-1 text-md-subtitle-2 text--demibold mb-2">Ваш телефон</div>
           <div class="form-input-cover">
@@ -36,10 +37,10 @@
           <div class="error error--none -validate-error-">Пожалуйста, укажите адрес!</div>
         </label>
         <button class="btn btn--primary btn--fill" type="submit">Отправить</button>
-      </div>
+      </form>
       <div class="text-body-2 lh-1-5 link-hover" data-fancybox-modal data-src="dialog-politic.html" data-type="ajax">
         <span class="fade-70">Нажимая кнопку «Отправить» вы даете согласие на</span> <span class="text--underline">обработку ваших персональных данных</span>
       </div>
     </div>
-  </form>
+  </div>
 </div>

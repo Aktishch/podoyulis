@@ -16,6 +16,7 @@ import filter from './filter';
 import formSubmit from './form-submit';
 import specifications from './specifications';
 import production from './production';
+import basket from './basket';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 import '../scss/index.scss';
@@ -24,6 +25,7 @@ Swiper.use([Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFad
 Swiper.defaults.touchStartPreventDefault = false
 window.Swiper = Swiper
 window.ripple = ripple
+window.basket = []
 window.addEventListener('DOMContentLoaded', () => loadHandler())
 
 function loadHandler() {
@@ -48,4 +50,5 @@ function loadHandler() {
 	formSubmit.init()
 	specifications.init()
 	production.init()
+	basket.init()
 }

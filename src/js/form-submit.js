@@ -1,3 +1,5 @@
+import { statusBasket } from "./basket"
+
 const formValidate = (form) => {
 
     const labels = form.querySelectorAll('.-validate-label-')
@@ -141,6 +143,11 @@ const formSubmit = (event) => {
             form.reset()
     
             submitBtn.removeAttribute('disabled')
+
+            if (form.hasAttribute('data-form-basket')) {
+                window.basket.length = 0
+                statusBasket()
+            }
     
         }).catch((error) =>
     

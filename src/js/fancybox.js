@@ -1,6 +1,6 @@
 import { Fancybox } from "@fancyapps/ui";
 import ru from "@fancyapps/ui/src/Fancybox/l10n/ru"
-import { createProductions } from "./production"
+import { createBasket } from "./basket"
 
 const init = () => {
   Fancybox.defaults.trapFocus = false
@@ -32,7 +32,7 @@ const init = () => {
     mainClass: 'fancybox-custom-modal',
     on: {
       done: () => {
-        createProductions()
+        createBasket()
       },
     },
   })

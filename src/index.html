@@ -83,28 +83,24 @@
             <input class="specifications__radio d-none" type="radio" name="number" value="10" checked>
             <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">№10</span>
           </label>
-          <label class="specifications__label specifications__label--big flex">
+          <!-- <label class="specifications__label specifications__label--big flex">
             <input class="specifications__radio d-none" type="radio" name="number" value="13">
             <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">№13</span>
-          </label>
+          </label> -->
         </div>
       </div>
       <div class="flex flex-column">
         <div class="text-body-1 text--demibold mb-2">Выберите абразивность:</div>
         <div class="specifications__labels flex flex-align-center">
           <label class="specifications__label specifications__label--min flex" data-filter-category="category-1">
-            <input class="specifications__radio d-none" type="radio" name="size" value="60" checked>
-            <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">60</span>
-          </label>
-          <label class="specifications__label specifications__label--min flex" data-filter-category="category-2">
-            <input class="specifications__radio d-none" type="radio" name="size" value="80">
+            <input class="specifications__radio d-none" type="radio" name="size" value="80" checked>
             <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">80</span>
           </label>
-          <label class="specifications__label specifications__label--min flex" data-filter-category="category-3">
+          <label class="specifications__label specifications__label--min flex" data-filter-category="category-2">
             <input class="specifications__radio d-none" type="radio" name="size" value="150">
             <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">150</span>
           </label>
-          <label class="specifications__label specifications__label--min flex" data-filter-category="category-4">
+          <label class="specifications__label specifications__label--min flex" data-filter-category="category-3">
             <input class="specifications__radio d-none" type="radio" name="size" value="320">
             <span class="specifications__btn flex flex-align-center flex-justify-center bg-green text-body-0 w-100 px-2" type="button">320</span>
           </label>
@@ -124,10 +120,6 @@
         <img class="specifications__img w-100" src="img/product-1.png" alt="">
         <div class="specifications__shadow d-none d-lg-block"></div>
       </div>
-      <div class="specifications__product d-none" data-filter-card="category-4">
-        <img class="specifications__img w-100" src="img/product-2.png" alt="">
-        <div class="specifications__shadow d-none d-lg-block"></div>
-      </div>
       <div class="specifications__items flex flex-column flex-align-end flex-justify-end color-primary w-100">
         <div class="specifications__item specifications__item--1 text-body-1 text--demibold text--right w-100 anim anim--up -scroll- pb-3 mb-5 mb-lg-10">Cохраняет свои свойства до конца работы</div>
         <div class="specifications__item specifications__item--2 text-body-1 text--demibold text--right w-100 anim anim--up -scroll- pb-3 mb-5 mb-lg-10">Абразив увеличивает скорость обработки</div>
@@ -137,7 +129,7 @@
         <div class="specifications__item specifications__item--6 text-body-1 text--demibold text--right w-100 anim anim--up -scroll- pb-3">Высокая теплотворность</div>
       </div>
       <form class="specifications__feedback bg-green w-100 anim anim--left -scroll- -form-params-" data-specification data-request="dialog-product.html" data-filter-card="category-1">
-        <input type="hidden" value="60" name="abrasiveness">
+        <input type="hidden" value="80" name="abrasiveness">
         <input type="hidden" value="img/product-1.png" name="image">
         <input data-specification-input="price" type="hidden" name="price">
         <input data-specification-input="oldprice" type="hidden" name="oldprice">
@@ -201,7 +193,7 @@
         </div>
       </form>
       <form class="specifications__feedback d-none bg-green w-100 -form-params-" data-specification data-request="dialog-product.html" data-filter-card="category-2">
-        <input type="hidden" value="80" name="abrasiveness">
+        <input type="hidden" value="150" name="abrasiveness">
         <input type="hidden" value="img/product-1.png" name="image">
         <input data-specification-input="price" type="hidden" name="price">
         <input data-specification-input="oldprice" type="hidden" name="oldprice">
