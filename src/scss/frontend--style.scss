@@ -609,6 +609,8 @@ body {
 }
 
 .result {
+	overflow: hidden;
+
 	&-slide {
 		border-radius: 20px;
 		position: relative;
