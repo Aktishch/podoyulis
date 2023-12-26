@@ -128,6 +128,7 @@ const formSubmit = (event) => {
             response.text()
     
         }).then(() => {
+            window.ym(95990582,'reachGoal','zayavka')
     
             Fancybox.close()
     
