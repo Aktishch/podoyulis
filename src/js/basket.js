@@ -47,7 +47,7 @@ export const createBasket = () => {
                     <div class="text-body-1 fade-60">Абразивность ${window.basket[i].abrasiveness}</div>
                 </div>
                 <div class="text--right">
-                    <s class="d-block text-body-1 fade-60 mb-md-1">${window.basket[i].oldprice} ₽</s>
+                    ${window.basket[i].oldprice !== '' ? `<s class="d-block text-body-1 fade-60 mb-md-1">${window.basket[i].oldprice} ₽</s>` : ''}
                     <span class="d-block text-h6 text-md-h3 text--demibold">${window.basket[i].price} ₽</span>
                 </div>
                 <button class="btn btn--sec btn--link" type="submit">

@@ -17,10 +17,10 @@ const init = () => {
 
             const writeInputValue = () => {
                 if (radio.checked === true) {
-                    inputPrice.value = textPrice.textContent
-                    inputOldPrice.value = textOldPrice.textContent
-                    inputBox.value = textBox.textContent
-                    inputQuantity.value = textQuantity.textContent
+                    inputPrice.value = textPrice ? textPrice.textContent : ''
+                    inputOldPrice.value = textOldPrice ? textOldPrice.textContent : ''
+                    inputBox.value = textBox ? textBox.textContent : ''
+                    inputQuantity.value = textQuantity ? textQuantity.textContent : ''
                 }
             }
 
