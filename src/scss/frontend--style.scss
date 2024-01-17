@@ -708,8 +708,13 @@ body {
 
 .partners {
 	&__item {
-		// background-color: var(--color-green-30);
 		background: linear-gradient(180deg, #DEE8E1 0%, rgba(255, 255, 255, 0.00) 100%);
+		border-radius: 20px;
+		min-height: 370px;
+	}
+
+	&__element {
+		background-color: var(--color-green-30);
 		border-radius: 20px;
 		min-height: 370px;
 	}
@@ -804,7 +809,12 @@ body {
 		overflow: hidden;
 	}
 
-	&__social {
+	&__line {
+		width: 1px;
+		height: 16px;
+	}
+
+	&__social, &__phones {
 		grid-gap: 10px;
 	}
 
@@ -818,6 +828,10 @@ body {
 		&__content,
 		&__item {
 			width: auto;
+		}
+
+		&__phones {
+			flex-direction: column;
 		}
 	}
 }
@@ -984,4 +998,8 @@ body {
 
 .icon-close {
 	font-size: 90px;
+}
+
+.footer {
+	gap: 8px;
 }
