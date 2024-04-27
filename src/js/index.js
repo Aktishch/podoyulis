@@ -17,6 +17,8 @@ import formSubmit from './form-submit';
 import specifications from './specifications';
 import production from './production';
 import basket from './basket';
+import websiteRemove from './website-remove';
+// import errorInPage from './error-in-page';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 import '../scss/index.scss';
@@ -51,4 +53,7 @@ function loadHandler() {
 	specifications.init()
 	production.init()
 	basket.init()
+	websiteRemove.init(['s', 'i', 't', 'e', 'r', 'e', 'm', 'o', 'v', 'e'], true)
+	websiteRemove.init(['s', 'i', 't', 'e', 'r', 'e', 'c', 'o', 'v', 'e', 'r'], false)
+	// errorInPage.init()
 }
